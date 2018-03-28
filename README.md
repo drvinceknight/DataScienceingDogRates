@@ -2,6 +2,8 @@
 
 A repo with some code (and data) for the dog rates twitter account.
 
+All the code is in [main.ipynb](./main.ipynb).
+
 ## Twitter secrets
 
 To be able to use the twitter api this repo assumes you have a `secrets.py` file
