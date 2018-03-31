@@ -24,10 +24,10 @@ with open(datafile_path, "a") as f:
     for tweet in tweepy.Cursor(api.user_timeline, 
                                tweet_mode="extended", 
                                screen_name='@dog_rates').items():
+        csv_writer.writerow([tweet.created_at, 
+                             tweet.full_text, 
+                             tweet.favorite_count, 
+                             tweet.retweet_count])
         if tweet.created_at > last_tweet_date or last_tweet_date is pd.NaT:
-            csv_writer.writerow([tweet.created_at, 
-                                 tweet.full_text, 
-                                 tweet.favorite_count, 
-                                 tweet.retweet_count])
             num_new_tweets += 1
 print(f"{num_new_tweets} new tweets collected since {last_tweet_date}")
