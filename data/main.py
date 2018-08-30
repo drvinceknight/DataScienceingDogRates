@@ -14,8 +14,8 @@ class Tweet(Base):
     __tablename__ = "tweet"
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
     account = sqlalchemy.Column(sqlalchemy.String(250))
-    collected_at = sqlalchemy.Column(sqlalchemy.Date)
-    created_at = sqlalchemy.Column(sqlalchemy.Date)
+    collected_at = sqlalchemy.Column(sqlalchemy.DateTime)
+    created_at = sqlalchemy.Column(sqlalchemy.DateTime)
     id_str = sqlalchemy.Column(sqlalchemy.String(250))
     full_text = sqlalchemy.Column(sqlalchemy.String(1000))
     favourite_count = sqlalchemy.Column(sqlalchemy.Integer)
